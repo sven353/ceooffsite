@@ -197,7 +197,7 @@ p:last-child {
 }
 
 .brand-logo {
-  height: 38px;
+  height: 40px;
   width: auto;
   display: block;
 }
@@ -209,13 +209,12 @@ p:last-child {
 .brand-caption {
   font-family: var(--font-body);
   font-weight: 300;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  color: var(--teal);
-  padding-top: 2px;
-  border-left: 1px solid var(--line);
-  padding-left: 12px;
-  margin-left: 2px;
+  font-size: 10.5px;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+  opacity: 0.4;
+  margin-left: 10px;
+  white-space: nowrap;
 }
 
 .wordmark small {
@@ -229,29 +228,51 @@ p:last-child {
   margin-top: 1px;
 }
 
+.site-header .container {
+  gap: 24px;
+}
+
 .header-nav {
   display: flex;
   align-items: center;
-  gap: clamp(16px, 3vw, 36px);
+  justify-content: center;
+  gap: clamp(20px, 3vw, 40px);
+  flex: 1 1 auto;
 }
 
-.header-nav a {
-  font-family: var(--font-display);
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.header-nav a:not(.header-cta) {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
   text-decoration: none;
-  color: var(--navy);
-  opacity: 0.75;
+  color: var(--charcoal);
+  opacity: 0.82;
 }
 
-.header-nav a:hover {
+.header-nav a:not(.header-cta):hover {
   opacity: 1;
 }
 
-.header-nav .btn {
-  padding: 11px 20px;
+.header-cta {
+  flex: 0 0 auto;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+  background: var(--charcoal);
+  color: #ffffff;
+  padding: 11px 22px;
+  border-radius: 4px;
+  border: 1px solid var(--charcoal);
+  transition: background 0.2s ease;
+}
+
+.header-cta:hover {
+  background: #14232b;
 }
 
 /* ---------- Hero ---------- */
@@ -940,8 +961,12 @@ section {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {
-  .header-nav a:not(.btn) {
+  .header-nav a:not(.header-cta) {
     display: none;
+  }
+
+  .header-nav {
+    justify-content: flex-end;
   }
 
   .footer-top {
@@ -993,6 +1018,10 @@ section {
 @media (max-width: 560px) {
   body {
     font-size: 16px;
+  }
+
+  .brand-caption {
+    display: none;
   }
 
   .hero-meta {
