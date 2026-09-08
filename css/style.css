@@ -196,6 +196,28 @@ p:last-child {
   color: var(--navy);
 }
 
+.brand-logo {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+.brand-logo-footer {
+  height: 40px;
+}
+
+.brand-caption {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--teal);
+  padding-top: 2px;
+  border-left: 1px solid var(--line);
+  padding-left: 12px;
+  margin-left: 2px;
+}
+
 .wordmark small {
   display: block;
   font-family: var(--font-body);
@@ -779,43 +801,62 @@ section {
   margin-top: 8px;
 }
 
-/* ---------- Footer ---------- */
+/* ---------- Footer (kumapartners.eu-matched, light) ---------- */
+
+:root {
+  --alabaster: #f5f4f0;
+  --charcoal: #1c2d37;
+  --stone-line: #e2e0d8;
+}
 
 .site-footer {
-  background: var(--navy-deep);
-  color: var(--cream);
-  padding: 64px 0 36px;
+  background: var(--alabaster);
+  color: var(--charcoal);
+  padding: 72px 0 0;
+  border-top: 1px solid var(--stone-line);
 }
 
 .footer-top {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid var(--line-on-navy);
-  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--stone-line);
+  margin-bottom: 0;
 }
 
 .footer-brand .brand-lockup .iso circle {
-  stroke: var(--cream);
+  stroke: var(--charcoal);
 }
 
 .footer-brand .wordmark {
-  color: var(--cream);
+  color: var(--charcoal);
+}
+
+.footer-brand .wordmark small {
+  color: var(--teal);
 }
 
 .footer-brand p {
-  max-width: 340px;
-  font-size: 14px;
-  opacity: 0.7;
-  margin-top: 16px;
+  max-width: 320px;
+  font-size: 14.5px;
+  color: var(--charcoal);
+  opacity: 0.72;
+  margin-top: 18px;
 }
 
-.footer-links {
-  display: flex;
-  gap: 64px;
-  flex-wrap: wrap;
+.footer-brand .footer-contact {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.footer-brand .footer-contact:hover {
+  text-decoration: underline;
 }
 
 .footer-links h5 {
@@ -824,8 +865,8 @@ section {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--teal-soft);
-  margin-bottom: 16px;
+  color: var(--teal);
+  margin-bottom: 18px;
 }
 
 .footer-links ul {
@@ -835,17 +876,43 @@ section {
 }
 
 .footer-links li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 14.5px;
 }
 
 .footer-links a {
+  color: var(--charcoal);
   text-decoration: none;
-  opacity: 0.82;
+  opacity: 0.78;
 }
 
 .footer-links a:hover {
   opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-hubs {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--stone-line);
+  font-size: 14px;
+}
+
+.footer-hubs .label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.footer-hubs .hub-list {
+  color: var(--charcoal);
+  opacity: 0.75;
 }
 
 .footer-bottom {
@@ -854,7 +921,9 @@ section {
   flex-wrap: wrap;
   gap: 12px;
   font-size: 12.5px;
-  opacity: 0.55;
+  color: var(--charcoal);
+  opacity: 0.6;
+  padding: 24px 0;
 }
 
 /* ---------- Utility ---------- */
@@ -873,6 +942,11 @@ section {
 @media (max-width: 900px) {
   .header-nav a:not(.btn) {
     display: none;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
 
   .tension-grid {
