@@ -20,3 +20,19 @@
   from = "/apply"
   to = "/#apply"
   status = 301
+
+# English lives at the root ("/"), not at "/en" — there is no /en folder
+# and there should never be one. These two rules only exist to catch
+# anyone who guesses "/en" by hand (mirroring the "/es/" pattern) and send
+# them to the real English page instead of a 404.
+[[redirects]]
+  from = "/en"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/*"
+  to = "/:splat"
+  status = 301
+  force = true
