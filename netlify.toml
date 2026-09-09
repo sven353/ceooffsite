@@ -2,6 +2,13 @@
   publish = "."
   command = ""
 
+# This is a plain multi-page static site, not a single-page app.
+# Do NOT add a catch-all rewrite here (e.g. from = "/*" to = "/index.html").
+# That pattern is for SPAs and would break language routing by serving the
+# root index.html for every path, including everything under /es/*.
+# Netlify already serves /index.html and /es/index.html natively based on
+# the publish directory (".") — no rewrite rule is needed for either.
+
 [[headers]]
   for = "/*"
   [headers.values]
