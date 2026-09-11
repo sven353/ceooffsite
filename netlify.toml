@@ -36,3 +36,15 @@
   to = "/:splat"
   status = 301
   force = true
+
+# Clean URLs for the legal pages (files are imprint.html / es/aviso-legal.html
+# on disk, served without the .html extension).
+[[redirects]]
+  from = "/imprint"
+  to = "/imprint.html"
+  status = 200
+
+[[redirects]]
+  from = "/es/aviso-legal"
+  to = "/es/aviso-legal.html"
+  status = 200

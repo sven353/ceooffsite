@@ -1119,6 +1119,58 @@ section {
   border-top: 1px solid var(--stone-line);
 }
 
+/* ---------- Legal pages (Imprint / Aviso legal) ---------- */
+
+.legal-content {
+  max-width: 640px;
+}
+
+.legal-field {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+.legal-field:last-of-type {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 40px;
+}
+
+.legal-field .legal-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+
+.legal-field p {
+  font-size: 15.5px;
+  color: var(--navy);
+}
+
+.legal-field a {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+.legal-disclaimers h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  margin-top: 32px;
+}
+
+.legal-disclaimers h3:first-child {
+  margin-top: 0;
+}
+
+.legal-disclaimers p {
+  font-size: 15px;
+  color: var(--body-text);
+}
+
 /* ---------- Utility ---------- */
 
 .text-center {
