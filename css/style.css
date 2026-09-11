@@ -1063,13 +1063,33 @@ section {
   text-decoration: underline;
 }
 
+.footer-links .cookie-prefs {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 14.5px;
+  color: var(--charcoal);
+  opacity: 0.78;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.footer-links .cookie-prefs:hover {
+  opacity: 1;
+  color: var(--charcoal);
+  text-decoration: underline;
+}
+
 .footer-hubs {
   display: flex;
   align-items: center;
   gap: 18px;
   flex-wrap: wrap;
-  padding: 28px 0;
-  border-bottom: 1px solid var(--stone-line);
+  padding: 28px 0 32px;
   font-size: 14px;
 }
 
@@ -1096,6 +1116,7 @@ section {
   color: var(--charcoal);
   opacity: 0.6;
   padding: 24px 0;
+  border-top: 1px solid var(--stone-line);
 }
 
 /* ---------- Utility ---------- */
